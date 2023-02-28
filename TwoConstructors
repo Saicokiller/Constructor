@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practicing // Utilizando 1 construtor vazio e 1 com parametros 
+{
+    internal class Construtores
+    {
+        public class Carro
+        {
+            public string Modelo;
+            public string Fabricante;
+            public int Ano;
+
+            public Carro(string modelo, string fabricante, int ano) //construtor com parametros
+            { 
+                Modelo= modelo;
+                Fabricante= fabricante; 
+                Ano= ano;
+            }
+            public Carro() //construtor padrao
+            {
+
+            }
+        }
+
+        public static void Executar()
+        {
+            Carro carro1= new Carro(); //essa instancia vai usar construtor padrao
+
+            carro1.Modelo = "Astra"; //atributos definidos 
+            carro1.Fabricante = "Volkswagen";
+            carro1.Ano = 2017;
+
+            Console.WriteLine($"Modelo = {carro1.Modelo}, Fabricante = {carro1.Fabricante}, Ano = {carro1.Ano}");
+
+            var carro2 = new Carro("Ka", "Ford", 2015); //essa instancia vai usar construtor com parametros
+
+            Console.WriteLine($"Modelo = {carro2.Modelo}, Fabricante = {carro2.Fabricante}, Ano = {carro2.Ano}");
+        }
+    }
+}
