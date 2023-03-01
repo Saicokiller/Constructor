@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practicing // 
+{
+    internal class GetSet
+    {
+        public class Moto
+        {
+            private string Marca;
+            //Construtor#1
+            public Moto(string marca) //Construtor da Classe com Parametro
+            {
+                Marca = marca;
+            }
+            //Construtor#2
+            public Moto() //Construtor da Classe Padrao
+            {
+
+            }
+            public string GetMarca() //Metodo sem params q retorna string
+            {
+                return Marca;
+            }
+            public void SetMarca(string marca) //Metodo com Params que nao retorna nada
+            {
+                Marca = marca;
+            }
+            public static void Executar()
+            {
+                var moto1 = new Moto("Honda"); //instanciando o construtor#1 com Parametro
+                var moto2 = new Moto(); //Instanciando o construtor#2 Padrao
+                moto2.SetMarca("Kawasaki"); //usando Metodo pra passar o valor por parametro, ja que esse objeto nao possui Construtor com parametro
+
+                Console.WriteLine(moto2.GetMarca());
+                Console.WriteLine(moto1.GetMarca());
+            }
+        }
+    }
+    
+}
